@@ -15,11 +15,11 @@
 .global asm0
 
 asm0:
-	push	ebp					          ;prólogo
-	mov	ebp,esp					        ;prólogo
+	push	ebp			;prólogo
+	mov	ebp,esp			;prólogo
 	mov	eax,DWORD PTR [ebp+0x8]	;Atribui o valor do register [ebp+0x8] ao register eax		eax=0xD8
 	mov	ebx,DWORD PTR [ebp+0xc]	;Atribui o valor do register [ebp+0xc] ao register ebx		ebx=0x7A 
-	mov	eax,ebx					        ;Atribui o valor do register ebx ao register eax			    eax=ebx | eax==0x7A
-	mov	esp,ebp					        ;epílogo
-	pop	ebp						          ;epílogo
-	ret							            ;ret 0x7A
+	mov	eax,ebx			;Atribui o valor do register ebx ao register eax		eax=ebx | eax==0x7A
+	mov	esp,ebp			;epílogo
+	pop	ebp			;epílogo
+	ret				;ret 0x7A
